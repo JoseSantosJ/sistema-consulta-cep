@@ -1,0 +1,346 @@
+/* === HEADER FIXO (GRID DE 8PX) === */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* === CONTAINER DO HEADER === */
+.header-container {
+  padding: 16px 0; /* 2 * 8px */
+}
+
+/* === MARCA/LOGO === */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* 2 * 8px */
+}
+
+.brand-icon {
+  width: 56px; /* 7 * 8px */
+  height: 56px;
+  background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+  border-radius: 16px; /* 2 * 8px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(13, 110, 253, 0.3);
+  transition: all 0.3s ease;
+}
+
+.brand-icon:hover {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+.brand-icon i {
+  font-size: 24px; /* 3 * 8px */
+  color: white;
+}
+
+.brand-content {
+  flex: 1;
+  min-width: 0; /* Para text-overflow funcionar */
+}
+
+.brand-title {
+  font-size: 1.375rem; /* 22px */
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 4px 0; /* 0.5 * 8px bottom */
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+.brand-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 1 * 8px */
+  flex-wrap: wrap;
+}
+
+.subtitle-label {
+  font-size: 0.875rem; /* 14px */
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.subtitle-year {
+  font-size: 0.75rem; /* 12px */
+  color: #ffffff;
+  background: #198754;
+  padding: 2px 8px; /* 0.25 * 8px, 1 * 8px */
+  border-radius: 12px; /* 1.5 * 8px */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* === INFORMAÇÕES DO DESENVOLVEDOR === */
+.developer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* 1.5 * 8px */
+  justify-content: flex-end;
+}
+
+.developer-avatar {
+  width: 48px; /* 6 * 8px */
+  height: 48px;
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.developer-avatar:hover {
+  transform: scale(1.1);
+  border-color: #0d6efd;
+}
+
+.developer-avatar i {
+  font-size: 24px; /* 3 * 8px */
+  color: #6c757d;
+}
+
+.developer-details {
+  text-align: right;
+  min-width: 0;
+}
+
+.developer-name {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 4px 0; /* 0.5 * 8px bottom */
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.developer-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px; /* 1 * 8px */
+  font-size: 0.75rem; /* 12px */
+  color: #6c757d;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.meta-divider {
+  color: #dee2e6;
+  font-weight: bold;
+}
+
+/* === DECORAÇÃO ANIMADA === */
+.header-decoration {
+  height: 3px;
+  background: linear-gradient(90deg, #0d6efd, #6610f2, #6f42c1, #d63384);
+  transform-origin: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* === RESPONSIVIDADE === */
+
+/* Tablet (768px - 1199px) */
+@media (max-width: 1199.98px) {
+  .developer-info {
+    justify-content: center;
+    margin-top: 12px; /* 1.5 * 8px */
+  }
+  
+  .developer-details {
+    text-align: center;
+  }
+  
+  .developer-meta {
+    justify-content: center;
+  }
+  
+  .brand-title {
+    font-size: 1.25rem; /* 20px */
+  }
+  
+  .developer-name {
+    font-size: 1rem; /* 16px, 2 * 8px */
+  }
+}
+
+/* Mobile (576px - 767px) */
+@media (max-width: 767.98px) {
+  .header-container {
+    padding: 12px 0; /* 1.5 * 8px */
+  }
+  
+  .header-brand {
+    gap: 12px; /* 1.5 * 8px */
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .brand-icon {
+    width: 48px; /* 6 * 8px */
+    height: 48px;
+  }
+  
+  .brand-icon i {
+    font-size: 20px; /* 2.5 * 8px */
+  }
+  
+  .brand-title {
+    font-size: 1.125rem; /* 18px */
+    text-align: center;
+  }
+  
+  .brand-subtitle {
+    justify-content: center;
+  }
+  
+  .developer-info {
+    gap: 8px; /* 1 * 8px */
+    margin-top: 8px; /* 1 * 8px */
+  }
+  
+  .developer-avatar {
+    width: 40px; /* 5 * 8px */
+    height: 40px;
+  }
+  
+  .developer-avatar i {
+    font-size: 20px; /* 2.5 * 8px */
+  }
+  
+  .developer-name {
+    font-size: 0.875rem; /* 14px */
+  }
+  
+  .developer-meta {
+    font-size: 0.6875rem; /* 11px */
+    gap: 4px; /* 0.5 * 8px */
+  }
+}
+
+/* Mobile Small (<576px) */
+@media (max-width: 575.98px) {
+  .header-container {
+    padding: 8px 0; /* 1 * 8px */
+  }
+  
+  .header-brand {
+    flex-direction: column;
+    gap: 8px; /* 1 * 8px */
+    text-align: center;
+  }
+  
+  .brand-icon {
+    width: 40px; /* 5 * 8px */
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  .brand-icon i {
+    font-size: 18px; /* 2.25 * 8px */
+  }
+  
+  .brand-title {
+    font-size: 1rem; /* 16px, 2 * 8px */
+    line-height: 1.4;
+  }
+  
+  .brand-subtitle {
+    flex-direction: column;
+    gap: 4px; /* 0.5 * 8px */
+  }
+  
+  .developer-info {
+    flex-direction: column;
+    gap: 6px; /* 0.75 * 8px */
+    margin-top: 6px; /* 0.75 * 8px */
+  }
+  
+  .developer-avatar {
+    margin: 0 auto;
+  }
+  
+  .developer-name {
+    font-size: 0.8125rem; /* 13px */
+    text-align: center;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+  
+  .developer-meta {
+    flex-direction: column;
+    gap: 2px; /* 0.25 * 8px */
+  }
+  
+  .meta-divider {
+    display: none;
+  }
+}
+
+/* === MELHORIAS DE PERFORMANCE === */
+.main-header {
+  contain: layout style paint;
+}
+
+.brand-icon,
+.developer-avatar {
+  will-change: transform;
+}
+
+/* === ESTADOS ESPECIAIS === */
+.main-header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* === MODO ESCURO === */
+@media (prefers-color-scheme: dark) {
+  .main-header {
+    background: rgba(33, 37, 41, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .brand-title,
+  .developer-name {
+    color: #f8f9fa;
+  }
+  
+  .subtitle-label,
+  .meta-item {
+    color: #adb5bd;
+  }
+  
+  .developer-avatar {
+    background: linear-gradient(135deg, #495057 0%, #6c757d 100%);
+    border-color: #495057;
+  }
+  
+  .developer-avatar i {
+    color: #adb5bd;
+  }
+}
